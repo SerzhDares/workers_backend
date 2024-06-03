@@ -24,25 +24,29 @@ let films = [
   {
     id: 1,
     date: new Date().toLocaleString(),
-    img: '',
-    description: "Фильм 1. Премьера 31 мая.",
+    img: "https://www.clipartmax.com/png/full/310-3105859_film-cinema-icon-png.png",
+    name: "Фильм 1",
+    description: "Премьера 31 августа",
   },
   {
     id: 2,
     date: new Date().toLocaleString(),
-    img: '',
-    description: "Фильм 2. Что осталось за кадром?",
+    img: "https://www.clipartmax.com/png/full/310-3105859_film-cinema-icon-png.png",
+    name: "Фильм 2",
+    description: "Что осталось за кадром?",
   },
   {
     id: 3,
     date: new Date().toLocaleString(),
-    img: '',
-    description: "Фильм 3. Рекордсмен по кассовым сборам",
+    img: "https://www.clipartmax.com/png/full/310-3105859_film-cinema-icon-png.png",
+    name: "Фильм 3",
+    description: "Рекордсмен по кассовым сборам",
   },
 ];
 
-app.use(() => {
-  setTimeout(() => console.log(films), 10000);
+app.use(async (request, response) => {
+  setTimeout(() => 
+    response.send(JSON.stringify(films)).end(), console.log(films), 10000);
 });
 
 const port = process.env.PORT || 7070;
