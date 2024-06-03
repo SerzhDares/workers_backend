@@ -45,9 +45,8 @@ let films = [
 ];
 
 app.use(async (request, response) => {
-  setTimeout(() => 
-    response.send(JSON.stringify(films)).end(), console.log(films), 10000);
-});
+    response.send(JSON.stringify(films)).end();
+})
 
 const port = process.env.PORT || 7070;
 
